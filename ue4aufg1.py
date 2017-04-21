@@ -13,28 +13,32 @@ def getfreqwords(indir, outfile):
 	all_files = glob.glob(indir +'/SAC-Jahrbuch_*_mul.xml')
 	
 
-	tree = ET.iterparse(all_files[0], events=('end',), tag='s')
-
 	my_dict = {}
+	for file in all_files:
+		tree = ET.iterparse(file, events=('end',), tag='s')
 
-	for _, sentence in tree:
-		sents = ''
-		wc = 0
-		for word in sentence.iterfind('.//w'):
-			lemma = str(word.get('lemma'))
-			sents += '{} {}'.format(' ', lemma)
-			word.clear()
-		if len(sents.split()) > 5:
-			if sents in my_dict:
-				my_dict[sents] += 1
-			else:
-				my_dict[sents] = 1
-		sentence.clear()
-	
-	print(max(my_dict, key=my_dict.get))
+		for _, sentence in tree:
+			sents = ''
+			wc = 0
+			for word in sentence.iterfind('.//w'):
+				lemma = str(word.get('lemma'))
+				sents += '{} {}'.format(' ', lemma)
+				word.clear()
+			if len(sents.split()) > 5:
+				if sents in my_dict:
+					my_dict[sents] += 1
+				else:
+					my_dict[sents] = 1
+			sentence.clear()
+
+	#sorted_dict = sorted(my_dict, key=my_dict.get, reverse=True)
+
+	for item in my_dict:
+		if my_dict[item] > 2:
+			print(item, my_dict[item])
 
 
-
+	#outfile.write(sorted_dict[0:20])
 
 
 
