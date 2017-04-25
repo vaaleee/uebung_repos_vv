@@ -10,8 +10,15 @@ import operator
 
 def getfreqwords(indir, outfile):
     """Gets most frequent lemma sentences out of directory with xml files"""
+
+    file_names = []
+    for filename in glob.glob(indir, recursive = True):
+        file_names.append(filename)
+    # Test ob glob funktioniert
+    #print(file_names)
+
     my_dict = {}
-    for file in indir:
+    for file in file_names:
         # parses the sentences for each file
         tree = ET.iterparse(file, events=('end',), tag='s')
 
@@ -42,11 +49,10 @@ def getfreqwords(indir, outfile):
 
 def main():
     ausgabe = open('haeufigste-saetze.txt', 'w')
-    file_names = []
-    for filename in glob.glob('Text+Berg_Release_152_v01/**/SAC-Jahrbuch_????_mul.xml', recursive = True):
-        file_names.append(filename)
 
-    getfreqwords(file_names, ausgabe)
+    directory = '**/SAC/SAC-Jahrbuch_????_mul.xml'
+
+    getfreqwords(directory, ausgabe)
 
     ausgabe.close()
 
