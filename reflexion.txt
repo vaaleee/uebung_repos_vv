@@ -1,0 +1,16 @@
+-*- coding: utf-8 -*-
+FS17, PCL II, Übung 4
+Reflexion
+Valentina Vogel & Martina Stüssi
+
+a) Fasse deine Erkenntnisse und Lernfortschritte in zwei Sätzen zusammen.
+Grosse Files sind anstrengend und stellen grössere Herausforderungen, als ich
+mir vorstellen konnte. Git scheint ein sehr nützliches Tool zu sein, dass ich
+noch nicht ganz durchschaue. Vorlesungsfolien noch einmal durchlesen, bevor ich
+ab der Übung verzweifle, scheint äusserst hilfreich zu sein.
+Atom / Sublime sind sehr hilfreiche Instrumente um Code zu schreiben, sie erinnern
+den Benutzer sogar daran, welche Dokumente schon mit git verbunden wurden.
+
+b) Wie viel Zeit hast du in diese Übungen investiert?
+Wir haben für die Übung relativ viel Zeit und vor allem relativ viel Geduld gebraucht (weil die Programme so lange brauchen).
+Insgesamt haben wir je ca. 10 Stunden gebraucht. Ein zweites Tutorat wäre allenfalls hilfreich gewesen.
