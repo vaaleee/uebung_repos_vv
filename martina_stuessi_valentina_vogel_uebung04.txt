@@ -1,0 +1,6 @@
+Link zum Repository:
+
+https://github.com/vaaleee/uebung_repos_vv.git
+
+Da wir nicht sicher sind, ob der Link funktioniert, haben wir
+die Programme noch in einem Ordner abgegeben.
